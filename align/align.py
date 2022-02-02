@@ -174,10 +174,6 @@ class NeedlemanWunsch:
                 self._gapB_matrix[i,j] = np.max(B)
                 self._back_B[i,j] = np.argmax(B)
 
-        print(self._align_matrix)
-        print(self._gapA_matrix)
-        print(self._gapB_matrix)
-
         return self._backtrace()
 
     def _backtrace(self) -> Tuple[float, str, str]:
